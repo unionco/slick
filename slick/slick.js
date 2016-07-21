@@ -1287,10 +1287,10 @@
 
         _.$slides.not(_.$slideTrack.find('.slick-cloned')).each(function(i) {
             $(this).attr('role', 'option');
-            
+
             //Evenly distribute aria-describedby tags through available dots.
             var describedBySlideId = _.options.centerMode ? i : Math.floor(i / _.options.slidesToShow);
-            
+
             if (_.options.dots === true) {
                 $(this).attr('aria-describedby', 'slick-slide' + _.instanceUid + describedBySlideId + '');
             }
@@ -1711,7 +1711,7 @@
 
         var _ = this, currentSlide, lastVisibleIndex;
 
-        lastVisibleIndex = _.slideCount - _.options.slidesToShow;
+        lastVisibleIndex = _.slideCount;
 
         // in non-infinite sliders, we don't want to go past the
         // last visible index.
